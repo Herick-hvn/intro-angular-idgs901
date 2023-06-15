@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'intro-angular-idgs901';
+
+  title:string = 'intro-angular-idgs901';
+
+ 
+  alumnos={
+    matricula:20002144,
+    nombre:'Herick',
+    edad:21,
+    fechaNacimiento: new Date(),
+    pago:9200.35
+
+
+  }
+
+  calcular(n:number):number{
+    return n*2
+  }
+  
 }

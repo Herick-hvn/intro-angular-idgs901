@@ -88,6 +88,10 @@
             ],
             "styles": [
               "src/styles.css"
+              //Aqui van las rutas de cuando iinstalas bootrap y font-awesome con npm install bootrap font-awesome
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/font-awesome/css/font-awesome.min.css"
+              
             ],
             "scripts": []
           }
