@@ -1,0 +1,16 @@
+<div class="container">
+    <mat-form-field>
+        <input matInput [{ngModel}]="num1" type="number" placeholder="Numero1" />
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [{ngModel}]="num2" type="number" placeholder="Numero2" />
+    </mat-form-field>
+    <mat-radio-group name="opciones" [{ngModel}]="operacionSeleccionada">
+        <mat-radio-button *ngFor="let op of tipoOperaciones" [value]="op" style="margin: 10px" "opciones" value="0">
+            {{op}}
+        </mat-radio-button>
+    </mat-radio-group>
+    <button (click)="calcular()" mat-raised-button color="primary"></button>
+    <p>El resultado es: {{resultado}}</p>
+
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IAlumnosIric } from '../alumnos-iric';
 
 @Component({
   selector: 'app-iric',
@@ -7,15 +8,23 @@ import { Component } from '@angular/core';
 })
 export class IricComponent {
 
-  alumnosIric:any[]=[
+  imageWidth:number=100
+  imageMargin:number=2
+  muestraImg:boolean=true
+  listFilter?:string
+  
+  showImage():void{
+    this.muestraImg=!this.muestraImg;
+  }
+
+  alumnosIric:IAlumnosIric[]=[
     {
       
         matricula:20002144,
         nombre:'Juan',
         edad:21,
         correo:"Juan@gmail.com",
-        foto:'https://www.google.com/search?rlz=1C1CHWL_esMX1030MX1030&sxsrf=APwXEddnTm8FyU6BkLjKbrM50q2pO2GzOw:1686792853740&q=personas+fotos&tbm=isch&sa=X&ved=2ahUKEwj__eyGkcT_AhUjIkQIHZ_XBmMQ0pQJegQICRAB&biw=1366&bih=649&dpr=1#imgrc=Il8yxmJjfsINOM'
-      
+        foto:"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"      
     },
     {
       
@@ -23,7 +32,7 @@ export class IricComponent {
       nombre:'Luisa',
       edad:23,
       correo:"Luisa@gmail.com",
-      foto:'https://www.google.com/search?q=personas+fotos&tbm=isch&chips=q:personas+fotos,g_1:cara:ACTg4neeYqY%3D&rlz=1C1CHWL_esMX1030MX1030&hl=es-419&sa=X&ved=2ahUKEwiDtpiWkcT_AhXeKd4AHRVgCKUQ4lYoAHoECAEQKA&biw=664&bih=622#imgrc=Qx_-Snt2V6mQiM'
+      foto:"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
     }
     ,
     {
@@ -32,9 +41,12 @@ export class IricComponent {
       nombre:'Mbappe',
       edad:24,
       correo:"Mbappe@gmail.com",
-      foto:'https://www.google.com/search?q=mbappe&tbm=isch&ved=2ahUKEwiDtpiWkcT_AhXeKd4AHRVgCKUQ2-cCegQIABAA&oq=mbappe&gs_lcp=CgNpbWcQAzINCAAQigUQsQMQgwEQQzIHCAAQigUQQzINCAAQigUQsQMQgwEQQzINCAAQigUQsQMQgwEQQzINCAAQigUQsQMQgwEQQzINCAAQigUQsQMQgwEQQzIHCAAQigUQQzIHCAAQigUQQzINCAAQigUQsQMQgwEQQzIECAAQAzoHCCMQ6gIQJzoECCMQJzoICAAQgAQQsQM6BQgAEIAEOggIABCxAxCDAVDYBFjYC2C8DGgBcAB4AYAB4weIAbAQkgEHNC0xLjEuMZgBAKABAaoBC2d3cy13aXotaW1nsAEKwAEB&sclient=img&ei=tWqKZMOHN97T-LYPlcChqAo&bih=649&biw=1366&rlz=1C1CHWL_esMX1030MX1030#imgrc=QZioRYgy9MiUJM'
+      foto:'https://fotografias.antena3.com/clipping/cmsimages01/2022/09/23/6B51E1BF-9895-40A1-AED9-A9CF5D925BA4/mbappe-partido-austria-nations-league_97.jpg?crop=1920,1080,x0,y101&width=1600&height=900&optimize=low&format=webply'
     }
   ]
+
+  
+  
 
 
 }

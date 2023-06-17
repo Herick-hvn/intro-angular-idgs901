@@ -9,3 +9,10 @@ thead{
     background-color: blueviolet;
     color: white;
 }
+
+.imagen-alumno {
+    width: 100px; /* Ajusta el ancho deseado */
+    height: 100px; /* Ajusta la altura deseada */
+    object-fit: cover; /* Para mantener la proporción de aspecto de la imagen */
+  }
+  
