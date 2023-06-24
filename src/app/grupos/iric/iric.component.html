@@ -26,7 +26,7 @@
                     <th>Correo</th>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let alumno of alumnosIric">
+                    <tr *ngFor="let alumno of alumnosIric" |alumnoFilter> 
                         <td><img *ngIf="muestraImg" [src]="alumno.foto" alt="Foto del alumno" 
                             [title]="alumno.nombre"
                             [style.width.px]="imageWidth"
